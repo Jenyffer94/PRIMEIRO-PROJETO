@@ -26,6 +26,7 @@
 
 body {
 background: var(--bg-ur) no-repeat top center/cover;
+height: auto;
 }
 
 body * {
@@ -166,10 +167,11 @@ footer{
 
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
+    --bg-ur: url(./assets/bg-desktop);
   }
 
   .light {
-    --bg-url: url(.assets/bg-desktop-light.jpg);
+    --bg-ur: url(./assets/bg-desktop-light.jpg);
   }
+  /*Essa função só funciona quando a tag "meta/viewport" está no html/head*/
 }
