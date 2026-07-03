@@ -82,11 +82,12 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.4s forwards;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 
@@ -167,11 +168,29 @@ footer{
 
 @media (min-width: 700px) {
   :root {
-    --bg-ur: url(./assets/bg-desktop);
+    --bg-ur: url(./assets/bg-desktop.jpg);
   }
 
   .light {
     --bg-ur: url(./assets/bg-desktop-light.jpg);
   }
   /*Essa função só funciona quando a tag "meta/viewport" está no html/head*/
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+}
+to {
+  right: 0;
+}
 }
